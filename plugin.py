@@ -11,7 +11,7 @@
         <h3>Configuration</h3>
         <ul style="list-style-type:square">
             <li style="line-height:normal">Output GPIO Pins - Comma delimited list of output (relay) GPIO pins. Format is pin number colon NC|NO|TO colon 0|1  ( e.g 16:TO:1, for GPIO16 where TO is for "On/Off" Button, NO is "Push On" Button, NC is a "Push Off" Button. 1 means active_low switch, 0 means active_high switch ) </li>
-            <li style="line-height:normal">Input GPIO Pins - Comma delimited list of board GPIO pin (e.g 2 for GPIO2, 14 for PGIO14, ...) to check for input</li>
+            <li style="line-height:normal">Input GPIO Pins - Comma delimited list of board GPIO pin (e.g 2 for GPIO2, 14 for GPIO14, ...) to check for input</li>
             <li style="line-height:normal">Heartbeat Frequency - Determines how often Input Pins are checked for values in seconds</li>
             <li style="line-height:normal">Debug - When true the logging level will be much higher to aid with troubleshooting</li>
         </ul>
