@@ -23,7 +23,7 @@ In the web UI, navigate to the Hardware page.  In the hardware dropdown there wi
 ## Updating
 
 To update:
-* Go in your Domoticz directory using a command line and open the plugins directory then the Domoticz-GPIO-Plugin directory.
+* Go in your Domoticz directory using a command line and open the plugins directory then the Domoticz-GPIO-Plugin-libgpiod directory.
 * Run: ```git pull```
 * Restart Domoticz.
 
@@ -32,7 +32,7 @@ To update:
 | Field | Information|
 | ----- | ---------- |
 | Output GPIO Pins | Comma delimited list of output (relay) GPIO pins. Format is pin number colon NC or NO or TO colon 0 or 1  ( e.g 16:TO:1, for GPIO16 where TO is for "On/Off" Button, NO is "Push On" Button, NC is a "Push Off" Button. 1 means active_low switch, 0 means active_high switch ) |
-| Input GPIO Pins | Comma delimited list of board GPIO pin (e.g 2 for GPIO2, 14 for PGIO14, ...) to check for input |
+| Input GPIO Pins | Comma delimited list of board GPIO pin (e.g 2 for GPIO2, 14 for GPIO14, ...) to check for input |
 | Heartbeat Frequency | Determines how often Input Pins are checked for values in seconds |
 | Debug | When true the logging level will be much higher to aid with troubleshooting |
 
