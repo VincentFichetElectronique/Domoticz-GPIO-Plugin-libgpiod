@@ -5,16 +5,17 @@ Controls GPIO pins on a Raspberry Pi.
 ## Key Features
 
 * Creates one Domoticz device per relay.
+* Support trixie debian.
 
 ## Installation
 
-Python version 3.4 or higher required & Domoticz version 3.7xxx or greater.
+Python version 3.13.5 or higher required & Domoticz version 2026.4 or greater.
 
 To install:
-* Run ```sudo pip3 install RPi.GPIO```
+* Run ```sudo apt-get install python3-libgpiod```
 * Go in your Domoticz directory, open the plugins directory.
 * Navigate to the directory using a command line
-* Run: ```git clone https://github.com/dnpwwo/Domoticz-GPIO-Plugin.git```
+* Run: ```git clone https://github.com/VincentFichetElectronique/Domoticz-GPIO-Plugin-libgpiod```
 * Restart Domoticz.
 
 In the web UI, navigate to the Hardware page.  In the hardware dropdown there will be an entry called "Raspberry Pi GPIO".
@@ -30,14 +31,13 @@ To update:
 
 | Field | Information|
 | ----- | ---------- |
-| Output Pins | Comma delimited list of output (relay) pins. Format is pin number colon NO or NC (e.g 39:NO) |
-| Input Pins | Comma delimited list of board pin numbers (1-40) to check for input |
-| Switch Debounce | Time (ms) between valid switch presses, prevents multi reports of events |
-| Heartbeat Frequency | Determines how often Input Pins are checked for values |
+| Output GPIO Pins | Comma delimited list of output (relay) GPIO pins. Format is pin number colon NC|NO|TO colon 0|1  ( e.g 16:TO:1, for GPIO16 where TO is for "On/Off" Button, NO is "Push On" Button, NC is a "Push Off" Button. 1 means active_low switch, 0 means active_high switch ) |
+| Input GPIO Pins | Comma delimited list of board GPIO pin (e.g 2 for GPIO2, 14 for PGIO14, ...) to check for input |
+| Heartbeat Frequency | Determines how often Input Pins are checked for values in seconds |
 | Debug | When true the logging level will be much higher to aid with troubleshooting |
 
 ## Change log
 
 | Version | Information|
 | ----- | ---------- |
-| 1.0.0 | Initial upload version |
+| 2.0.0 | Initial upload version |
