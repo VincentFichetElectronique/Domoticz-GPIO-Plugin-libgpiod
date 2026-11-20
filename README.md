@@ -1,4 +1,4 @@
-# Domoticz-GPIO-Plugin
+# Domoticz-GPIO-Plugin-libgpiod
 
 Controls GPIO pins on a Raspberry Pi.
 
